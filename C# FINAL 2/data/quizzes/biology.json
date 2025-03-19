@@ -1,0 +1,177 @@
+{
+    "Title": "Biology",
+    "UserScores": {},
+    "Questions": [
+        {
+            "Text": "What is the powerhouse of the cell?",
+            "Answers": [
+                "Nucleus",
+                "Mitochondria",
+                "Endoplasmic Reticulum"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "What is the basic unit of life?",
+            "Answers": [
+                "Atom",
+                "Cell",
+                "Organ"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "Which process do plants use to make food?",
+            "Answers": [
+                "Respiration",
+                "Photosynthesis",
+                "Digestion"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "What type of bond holds the two strands of a DNA molecule together?",
+            "Answers": [
+                "Ionic bond",
+                "Covalent bond",
+                "Hydrogen bond"
+            ],
+            "CorrectAnswer": 3
+        },
+        {
+            "Text": "What is the name of the pigment that makes plants green?",
+            "Answers": [
+                "Carotene",
+                "Chlorophyll",
+                "Xanthophyll"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "Which part of the brain controls balance and coordination?",
+            "Answers": [
+                "Cerebrum",
+                "Cerebellum",
+                "Medulla Oblongata"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "What is the largest organ in the human body?",
+            "Answers": [
+                "Heart",
+                "Liver",
+                "Skin"
+            ],
+            "CorrectAnswer": 3
+        },
+        {
+            "Text": "What is the process by which cells divide to form two identical cells?",
+            "Answers": [
+                "Mitosis",
+                "Meiosis",
+                "Fission"
+            ],
+            "CorrectAnswer": 1
+        },
+        {
+            "Text": "Which of these animals is a mammal?",
+            "Answers": [
+                "Shark",
+                "Eagle",
+                "Dolphin"
+            ],
+            "CorrectAnswer": 3
+        },
+        {
+            "Text": "Which organ is responsible for pumping blood throughout the human body?",
+            "Answers": [
+                "Brain",
+                "Heart",
+                "Lungs"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "What is the primary function of white blood cells?",
+            "Answers": [
+                "Transport oxygen",
+                "Fight infection",
+                "Clot blood"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "Which of these is not a type of muscle in the human body?",
+            "Answers": [
+                "Smooth muscle",
+                "Cardiac muscle",
+                "Striated muscle"
+            ],
+            "CorrectAnswer": 3
+        },
+        {
+            "Text": "Which element is the most abundant in the human body?",
+            "Answers": [
+                "Oxygen",
+                "Carbon",
+                "Hydrogen"
+            ],
+            "CorrectAnswer": 1
+        },
+        {
+            "Text": "What is the term for a group of cells working together to perform a specific function?",
+            "Answers": [
+                "Tissue",
+                "Organ",
+                "System"
+            ],
+            "CorrectAnswer": 1
+        },
+        {
+            "Text": "What type of blood vessel carries blood away from the heart?",
+            "Answers": [
+                "Artery",
+                "Vein",
+                "Capillary"
+            ],
+            "CorrectAnswer": 1
+        },
+        {
+            "Text": "Which of these animals is a herbivore?",
+            "Answers": [
+                "Lion",
+                "Elephant",
+                "Penguin"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "What is the main function of red blood cells?",
+            "Answers": [
+                "Fight infection",
+                "Transport oxygen",
+                "Clot blood"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "Which part of the cell contains the genetic material?",
+            "Answers": [
+                "Nucleus",
+                "Mitochondria",
+                "Endoplasmic Reticulum"
+            ],
+            "CorrectAnswer": 1
+        },
+        {
+            "Text": "What is the name of the process that produces energy in the form of ATP in the cell?",
+            "Answers": [
+                "Fermentation",
+                "Respiration",
+                "Photosynthesis"
+            ],
+            "CorrectAnswer": 2
+        }
+    ]
+}

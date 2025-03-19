@@ -1,0 +1,186 @@
+{
+    "Title": "Geography",
+    "UserScores": {},
+    "Questions": [
+        {
+            "Text": "What is the capital city of France?",
+            "Answers": [
+                "Paris",
+                "London",
+                "Berlin"
+            ],
+            "CorrectAnswer": 1
+        },
+        {
+            "Text": "Which continent is known as the 'Dark Continent'?",
+            "Answers": [
+                "Asia",
+                "Africa",
+                "South America"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "Which country has the largest land area in the world?",
+            "Answers": [
+                "Canada",
+                "Russia",
+                "China"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "What is the longest river in the world?",
+            "Answers": [
+                "Amazon River",
+                "Nile River",
+                "Yangtze River"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "Which country is both an island and a continent?",
+            "Answers": [
+                "Australia",
+                "New Zealand",
+                "Indonesia"
+            ],
+            "CorrectAnswer": 1
+        },
+        {
+            "Text": "What is the tallest mountain in the world?",
+            "Answers": [
+                "K2",
+                "Mount Everest",
+                "Mount Kilimanjaro"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "Which ocean is the largest?",
+            "Answers": [
+                "Atlantic Ocean",
+                "Indian Ocean",
+                "Pacific Ocean"
+            ],
+            "CorrectAnswer": 3
+        },
+        {
+            "Text": "What is the capital city of Japan?",
+            "Answers": [
+                "Seoul",
+                "Beijing",
+                "Tokyo"
+            ],
+            "CorrectAnswer": 3
+        },
+        {
+            "Text": "Which country is home to the Great Barrier Reef?",
+            "Answers": [
+                "South Africa",
+                "Australia",
+                "Mexico"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "What is the largest desert in the world?",
+            "Answers": [
+                "Gobi Desert",
+                "Sahara Desert",
+                "Antarctic Desert"
+            ],
+            "CorrectAnswer": 3
+        },
+        {
+            "Text": "Which country has the most official languages?",
+            "Answers": [
+                "Switzerland",
+                "South Africa",
+                "India"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "Which city is known as the 'City of Canals'?",
+            "Answers": [
+                "Paris",
+                "Venice",
+                "Amsterdam"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "Which river is the longest in the United States?",
+            "Answers": [
+                "Mississippi River",
+                "Colorado River",
+                "Ohio River"
+            ],
+            "CorrectAnswer": 1
+        },
+        {
+            "Text": "What is the smallest country in the world?",
+            "Answers": [
+                "Monaco",
+                "Vatican City",
+                "San Marino"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "Which continent is known for having no permanent residents?",
+            "Answers": [
+                "Antarctica",
+                "Australia",
+                "South America"
+            ],
+            "CorrectAnswer": 1
+        },
+        {
+            "Text": "Which country is home to the pyramids of Giza?",
+            "Answers": [
+                "Egypt",
+                "Peru",
+                "Mexico"
+            ],
+            "CorrectAnswer": 1
+        },
+        {
+            "Text": "What is the name of the mountain range that runs along the west coast of South America?",
+            "Answers": [
+                "Andes Mountains",
+                "Himalayas",
+                "Rocky Mountains"
+            ],
+            "CorrectAnswer": 1
+        },
+        {
+            "Text": "Which U.S. state is known as the 'Sunshine State'?",
+            "Answers": [
+                "California",
+                "Texas",
+                "Florida"
+            ],
+            "CorrectAnswer": 3
+        },
+        {
+            "Text": "Which country is known as the 'Land of the Rising Sun'?",
+            "Answers": [
+                "Japan",
+                "China",
+                "Thailand"
+            ],
+            "CorrectAnswer": 1
+        },
+        {
+            "Text": "What is the largest island in the world?",
+            "Answers": [
+                "Australia",
+                "Greenland",
+                "New Guinea"
+            ],
+            "CorrectAnswer": 2
+        }
+    ]
+}

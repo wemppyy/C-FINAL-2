@@ -1,0 +1,186 @@
+{
+    "Title": "History",
+    "UserScores": {},
+    "Questions": [
+        {
+            "Text": "Who was the first president of the United States?",
+            "Answers": [
+                "Thomas Jefferson",
+                "George Washington",
+                "Abraham Lincoln"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "In which year did World War I begin?",
+            "Answers": [
+                "1912",
+                "1914",
+                "1916"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "What was the name of the ship that brought the Pilgrims to America in 1620?",
+            "Answers": [
+                "Mayflower",
+                "Nina",
+                "Santa Maria"
+            ],
+            "CorrectAnswer": 1
+        },
+        {
+            "Text": "Who was the famous queen of Egypt who had relationships with Julius Caesar and Mark Antony?",
+            "Answers": [
+                "Nefertiti",
+                "Cleopatra",
+                "Hatshepsut"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "What year did the Berlin Wall fall?",
+            "Answers": [
+                "1985",
+                "1987",
+                "1989"
+            ],
+            "CorrectAnswer": 3
+        },
+        {
+            "Text": "Which country was the first to send a man to space?",
+            "Answers": [
+                "USA",
+                "Soviet Union",
+                "China"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "Which event marked the start of the American Civil War?",
+            "Answers": [
+                "The Battle of Gettysburg",
+                "The signing of the Emancipation Proclamation",
+                "The Battle of Fort Sumter"
+            ],
+            "CorrectAnswer": 3
+        },
+        {
+            "Text": "Who discovered the Americas in 1492?",
+            "Answers": [
+                "Marco Polo",
+                "Christopher Columbus",
+                "Ferdinand Magellan"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "Which empire was ruled by Julius Caesar?",
+            "Answers": [
+                "Roman Empire",
+                "Byzantine Empire",
+                "Ottoman Empire"
+            ],
+            "CorrectAnswer": 1
+        },
+        {
+            "Text": "Who was the first woman to fly solo across the Atlantic Ocean?",
+            "Answers": [
+                "Amelia Earhart",
+                "Bessie Coleman",
+                "Jacqueline Cochran"
+            ],
+            "CorrectAnswer": 1
+        },
+        {
+            "Text": "In which battle did Napoleon Bonaparte suffer his final defeat?",
+            "Answers": [
+                "Battle of Leipzig",
+                "Battle of Waterloo",
+                "Battle of Austerlitz"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "What year did the Titanic sink?",
+            "Answers": [
+                "1910",
+                "1912",
+                "1914"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "Who was the first emperor of China?",
+            "Answers": [
+                "Qin Shi Huang",
+                "Liu Bang",
+                "Sun Yat-sen"
+            ],
+            "CorrectAnswer": 1
+        },
+        {
+            "Text": "In which city was the Declaration of Independence signed?",
+            "Answers": [
+                "New York",
+                "Philadelphia",
+                "Washington D.C."
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "Which ancient civilization built the pyramids?",
+            "Answers": [
+                "Greeks",
+                "Romans",
+                "Egyptians"
+            ],
+            "CorrectAnswer": 3
+        },
+        {
+            "Text": "What year did the French Revolution begin?",
+            "Answers": [
+                "1776",
+                "1789",
+                "1799"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "Who was the longest-reigning British monarch before Queen Elizabeth II?",
+            "Answers": [
+                "Queen Victoria",
+                "King George III",
+                "King Henry VIII"
+            ],
+            "CorrectAnswer": 1
+        },
+        {
+            "Text": "What was the main reason for the start of World War II?",
+            "Answers": [
+                "The assassination of Archduke Franz Ferdinand",
+                "The invasion of Poland by Germany",
+                "The bombing of Pearl Harbor"
+            ],
+            "CorrectAnswer": 2
+        },
+        {
+            "Text": "Which leader is known for leading India to independence from Britain?",
+            "Answers": [
+                "Jawaharlal Nehru",
+                "Subhas Chandra Bose",
+                "Mahatma Gandhi"
+            ],
+            "CorrectAnswer": 3
+        },
+        {
+            "Text": "Who was the last tsar of Russia?",
+            "Answers": [
+                "Nicholas II",
+                "Alexander III",
+                "Peter the Great"
+            ],
+            "CorrectAnswer": 1
+        }
+    ]
+}
