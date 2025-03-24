@@ -62,5 +62,23 @@ namespace C__FINAL_2.services
             _users.Add(user);
             SaveUsers();
         }
+
+        public void ChangePassword(User user, string oldPassword, string newPassword)
+        {
+            if (oldPassword == user.Password)
+            {
+                user.Password = newPassword;
+                SaveUsers();
+            } else
+            {
+                throw new Exception("Old password is not correct");
+            }
+        }
+
+        public void ChangeBirthDate(User user, DateTime birthDate)
+        {
+            user.BirthDate = birthDate;
+            SaveUsers();
+        }
     }
 }

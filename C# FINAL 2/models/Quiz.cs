@@ -10,5 +10,10 @@ namespace C__FINAL_2.models
     {
         public string Title { get; set; }
         public List<Question> Questions { get; set; }
+
+        public override bool Equals(object? obj)
+        {
+            return base.Equals(obj);
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿#define ADMIN_MODE
+﻿// #define ADMIN_MODE
 
 using System;
 using C__FINAL_2.services;
@@ -11,12 +11,26 @@ namespace C__FINAL_2
         static User Login(UserService userService)
         {
             Console.Clear();
-            Console.WriteLine("Enter your login: ");
+            Console.Write("Enter your login: ");
             string login = Console.ReadLine();
-            Console.WriteLine("Enter your password: ");
+            Console.Write("Enter your password: ");
             string password = Console.ReadLine();
 
             Console.WriteLine();
+            try
+            {
+                userService.Login(login, password);
+                return userService.GetUser(login);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return null;
+            }
+        }
+
+        static User Login(UserService userService, string login, string password)
+        {
             try
             {
                 userService.Login(login, password);
@@ -61,18 +75,136 @@ namespace C__FINAL_2
             quizService.StartQuiz(user, quiz);
         }
 
+        static void SettingsMenu(UserService userService, User user)
+        {
+            Console.Clear();
+            Console.WriteLine("1. Change password");
+            Console.WriteLine("2. Change birth date");
+            Console.Write("Enter your choice: ");
+
+            int choice = int.Parse(Console.ReadLine());
+
+            switch (choice)
+            {
+                case 1:
+                    Console.Clear();
+
+                    Console.Write("Enter the OLD password: ");
+                    string oldPassword = Console.ReadLine();
+                    Console.Write("Enter the NEW password: ");
+                    string newPassword = Console.ReadLine();
+
+                    try
+                    {
+                        userService.ChangePassword(user, oldPassword, newPassword);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.Message);
+                        return;
+                    }
+
+                    break;
+                case 2:
+                    Console.Clear();
+
+                    Console.WriteLine("Enter the NEW birth date (yyyy-MM-dd)");
+                    DateTime birthDate = DateTime.Parse(Console.ReadLine());
+                    userService.ChangeBirthDate(user, birthDate);
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice");
+                    break;
+
+
+            }
+        }
+ 
+        static void MainMenu (QuizService quizService, User user, UserService userService, QuizCreator quizCreator)
+        {
+            Console.Clear();
+
+            int menuCount = 6;
+
+            Console.WriteLine("1. Start a new quiz");
+            Console.WriteLine("2. Review your results");
+            Console.WriteLine("3. Review the Top 20 from a specific quiz");
+            Console.WriteLine("4. Change settings");
+            Console.WriteLine("5. Exit");
+            Console.WriteLine("---------");
+
+            if (user.IsAdmin)
+            {
+                Console.WriteLine("6. Create quiz");
+            }
+
+            Console.Write("Enter your choice: ");
+
+            int choice = int.Parse(Console.ReadLine());
+
+            switch (choice)
+            {
+                case 1:
+                    QuizMenu(quizService, user);
+                    break;
+                case 2:
+                    Console.Clear();
+                    Console.WriteLine(quizService.GetQuizTitles());
+                    Console.Write("Enter the index of the quiz: ");
+                    int index2 = int.Parse(Console.ReadLine());
+
+                    Console.Clear();
+                    quizService.statisticService.PrintResultsByUserAndQuiz(quizService.GetQuiz(index2 - 1), user);
+                    Console.WriteLine("Press any key to continue...");
+                    Console.ReadKey();
+                    break;
+                case 3:
+                    Console.Clear();
+                    Console.WriteLine(quizService.GetQuizTitles());
+                    Console.Write("Enter the index of the quiz: ");
+                    int index3 = int.Parse(Console.ReadLine());
+
+                    Console.Clear();
+                    quizService.statisticService.PrintTopByQuiz(quizService.GetQuiz(index3 - 1), 20);
+                    Console.WriteLine("Press any key to continue...");
+                    Console.ReadKey();
+                    break;
+                case 4:
+                    SettingsMenu(userService, user);
+                    break;
+                case 5:
+                    Environment.Exit(0);
+                    break;
+                case 6:
+                    Console.Clear();
+                    if (user.IsAdmin)
+                    {
+                        quizCreator.CreateQuiz(quizService);
+                    } else
+                        Console.WriteLine("Access denied. You are not an admin!");
+                    Console.WriteLine("Press any key to continue...");
+                    Console.ReadKey();
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice");
+                    break;
+            }
+
+        }
+
         static void Main(string[] args)
         {
             UserService userService = new UserService();
 
 #if ADMIN_MODE
-            Register(userService, "admin", "admin", new DateTime(2000, 1, 1));
-            User user = userService.GetUser("admin");
+            User user = Login(userService, "admin", "admin");
 #else
             User user = null;
 
             while (user == null)
             {
+                Console.Clear();
+
                 Console.WriteLine("1. Login");
                 Console.WriteLine("2. Register");
                 Console.Write("Enter your choice: ");
@@ -94,9 +226,11 @@ namespace C__FINAL_2
 
             QuizService quizService = new QuizService();
 
+            QuizCreator quizCreator = new QuizCreator();
+
             while (true)
             {
-                QuizMenu(quizService, user);
+                MainMenu(quizService, user, userService, quizCreator);
             }
         }
     }

@@ -12,17 +12,17 @@ namespace C__FINAL_2.services
     {
         private static readonly string projectRoot = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
         private static readonly string quizzesDirectory = Path.Combine(projectRoot, "data", "quizzes");
-        private static readonly string statisticsFile = Path.Combine(projectRoot, "data", "statistics.json");
         private List<Quiz> _quizzes;
-        private List<Statistic> _statistics;
+
+        public StatisticService statisticService { get; set; }
 
         public QuizService()
         {
             LoadQuizzes();
-            LoadStatistics();
+            statisticService = new StatisticService();
         }
 
-        private void LoadQuizzes()
+        public void LoadQuizzes()
         {
             _quizzes = new List<Quiz>();
             string[] quizFiles = Directory.GetFiles(quizzesDirectory);
@@ -34,22 +34,9 @@ namespace C__FINAL_2.services
             }
         }
 
-        private void LoadStatistics()
-        {
-            if (!File.Exists(statisticsFile))
-            {
-                _statistics = new List<Statistic>();
-                SaveStatistics();
-            }
-            string statisticsJson = File.ReadAllText(statisticsFile);
-            _statistics = JsonSerializer.Deserialize<List<Statistic>>(statisticsJson);
-        }
+        
 
-        private void SaveStatistics()
-        {
-            string statisticsJson = JsonSerializer.Serialize(_statistics);
-            File.WriteAllText(statisticsFile, statisticsJson);
-        }
+        
 
         public Quiz GetQuiz(int index)
         {
@@ -66,21 +53,7 @@ namespace C__FINAL_2.services
             return sb.ToString();
         }
 
-        public void PrintQuizTop(Quiz quiz)
-        {
-
-            for (int i = 0; i < 5; i++)
-            {
-                if (i < _statistics.Count)
-                {
-                    Statistic statistic = _statistics[i];
-                    if (statistic.QuizTitle == quiz.Title) Console.WriteLine($"{statistic.UserLogin}: {statistic.Score}");}
-                else
-                {
-                    Console.WriteLine("------");
-                }
-            }
-        }
+        
 
         public void StartQuiz(User user, Quiz quiz)
         {
@@ -88,7 +61,8 @@ namespace C__FINAL_2.services
             {
                 UserLogin = user.Login,
                 QuizTitle = quiz.Title,
-                Score = 0
+                Score = 0,
+                UserTime = DateTime.Now
             };
             int questionIndex = 1;
             foreach (Question question in quiz.Questions)
@@ -107,14 +81,13 @@ namespace C__FINAL_2.services
                     statistic.Score++;
                 }
             }
-            _statistics.Add(statistic);
+            statisticService.AddStatistic(statistic);
 
             Console.Clear();
             Console.WriteLine($"Your score: {statistic.Score}");
-            SaveStatistics();
 
             Console.WriteLine("\nTop scores:");
-            PrintQuizTop(quiz);
+            statisticService.PrintTopByQuiz(quiz, 5);
 
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
