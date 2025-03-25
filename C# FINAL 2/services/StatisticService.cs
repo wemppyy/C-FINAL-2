@@ -71,10 +71,23 @@ namespace C__FINAL_2.services
                 .Where(s => s.QuizTitle == quiz.Title && s.UserLogin == user.Login)
                 .ToList();
 
-            for (int i = 0; i < filteredResults.Count; i++)
+            if (filteredResults.Count > 0) {
+                var Results = filteredResults.Last().QuestionsAndUserAnswers;
+
+                int i = 1;
+                foreach (var pair in Results)
+                {
+                    Console.WriteLine($"{i}. {pair.Key}");
+                    Console.WriteLine($"Your answer: {pair.Value}\n");
+                    i++;
+                }
+            } else
             {
-                Console.WriteLine($"{i + 1}. {filteredResults[i].UserTime.ToString()} - {filteredResults[i].Score} points");
+                Console.WriteLine("Quiz is empty");
             }
+
+            
+
         }
     }
 }

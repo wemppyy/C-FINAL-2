@@ -11,7 +11,7 @@ namespace C__FINAL_2.models
         public string UserLogin { get; set; }
         public string QuizTitle { get; set; }
         public int Score { get; set; }
-        public DateTime UserTime { get; set; }
+        public Dictionary<string, string> QuestionsAndUserAnswers {  get; set; }
 
     }
 }

@@ -80,5 +80,32 @@ namespace C__FINAL_2.services
             user.BirthDate = birthDate;
             SaveUsers();
         }
+
+        public void printAllUsers()
+        {
+            for (int i = 0; i < _users.Count(); i++)
+            {
+                Console.WriteLine($"{i+1}. {_users[i].Login}");
+            }
+        }
+
+        public User getUserByIndex(int index)
+        {
+            return _users[index];
+        }
+
+        public void assignUserAsAdmin(User user)
+        {
+            user.IsAdmin = true;
+            SaveUsers();
+        }
+
+        public void unassignUserAsAdmin(User user)
+        {
+            user.IsAdmin = false;
+            SaveUsers();
+        }
+
+
     }
 }

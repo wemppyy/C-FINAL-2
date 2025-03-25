@@ -62,7 +62,7 @@ namespace C__FINAL_2.services
                 UserLogin = user.Login,
                 QuizTitle = quiz.Title,
                 Score = 0,
-                UserTime = DateTime.Now
+                QuestionsAndUserAnswers = new Dictionary<string, string>()
             };
             int questionIndex = 1;
             foreach (Question question in quiz.Questions)
@@ -76,11 +76,15 @@ namespace C__FINAL_2.services
                 }
                 Console.Write("\nEnter your answer (index): ");
                 int answerIndex = int.Parse(Console.ReadLine());
+
                 if (answerIndex == question.CorrectAnswer)
                 {
                     statistic.Score++;
                 }
+
+                statistic.QuestionsAndUserAnswers[question.Text] = question.Answers[answerIndex-1];
             }
+
             statisticService.AddStatistic(statistic);
 
             Console.Clear();

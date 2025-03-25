@@ -27,7 +27,7 @@ namespace C__FINAL_2.services
             for (int i = 0; i < questionsCount; i++)
             {
                 Console.Clear();
-                Console.WriteLine($"({i+1} / {questionsCount})");
+                Console.WriteLine($"({i+1}/{questionsCount})");
                 Console.Write("Enter the text of question: ");
                 string questionText = Console.ReadLine();
 

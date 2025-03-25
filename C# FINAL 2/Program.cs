@@ -1,4 +1,4 @@
-﻿// #define ADMIN_MODE
+﻿#define ADMIN_MODE
 
 using System;
 using C__FINAL_2.services;
@@ -119,7 +119,42 @@ namespace C__FINAL_2
 
             }
         }
- 
+
+        static void AdminMenu(QuizService quizService, QuizCreator quizCreator, UserService userService)
+        {
+            Console.Clear();
+            Console.WriteLine("1. Create a new quiz");
+            Console.WriteLine("2. Assign a user as an administrator");
+            Console.WriteLine("3. Unassign a user as an administrator");
+            Console.WriteLine("Enter your choice: ");
+
+            int choice = int.Parse(Console.ReadLine());
+
+            switch (choice)
+            {
+                case 1:
+                    quizCreator.CreateQuiz(quizService);
+                    break;
+                case 2:
+                    Console.Clear();
+                    userService.printAllUsers();
+                    Console.WriteLine("Enter user index");
+                    int userIndex = int.Parse(Console.ReadLine());
+                    userService.assignUserAsAdmin(userService.getUserByIndex(userIndex - 1));
+                    break;
+                case 3:
+                    Console.Clear();
+                    userService.printAllUsers();
+                    Console.WriteLine("Enter user index");
+                    int userIndex2 = int.Parse(Console.ReadLine());
+                    userService.unassignUserAsAdmin(userService.getUserByIndex(userIndex2 - 1));
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice");
+                    break;
+            }
+        }
+
         static void MainMenu (QuizService quizService, User user, UserService userService, QuizCreator quizCreator)
         {
             Console.Clear();
@@ -135,7 +170,7 @@ namespace C__FINAL_2
 
             if (user.IsAdmin)
             {
-                Console.WriteLine("6. Create quiz");
+                Console.WriteLine("6. ADMIN MODE");
             }
 
             Console.Write("Enter your choice: ");
@@ -179,7 +214,7 @@ namespace C__FINAL_2
                     Console.Clear();
                     if (user.IsAdmin)
                     {
-                        quizCreator.CreateQuiz(quizService);
+                        AdminMenu(quizService, quizCreator, userService);
                     } else
                         Console.WriteLine("Access denied. You are not an admin!");
                     Console.WriteLine("Press any key to continue...");
